@@ -1,0 +1,16 @@
+body {
+    background: rgb(75, 75, 75);
+}
+
+a {
+    background: rgb(255, 196, 34);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10, 20;
+    display: flex;
+}
+
+a:hover {
+    background: rgb(141, 103, 0);
+}

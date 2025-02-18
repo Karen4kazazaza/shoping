@@ -1,0 +1,188 @@
+/* Общие стили */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Делаем контейнер флексом */
+    justify-content: left; /* Центрируем кнопки */
+    gap: 15px; /* Отступ между кнопками */
+}
+
+nav ul li {
+    margin: 0; /* Убираем ненужные отступы */
+}
+
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background: rgb(255, 196, 34);
+    border: none;
+    padding: 10px 20px; /* Делаем кнопки более удобными */
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    display: inline-block; /* Гарантия правильного отображения */
+}
+
+nav ul li a:hover {
+    background: rgb(141, 103, 0);
+}
+
+/* Заголовок */
+header {
+    background: #1e1e1e;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    font-size: 24px;
+    text-align: left; /* Центрируем заголовок */
+    width: 1600px;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3f3f3f;
+    text-align: center;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Карточка товара */
+.product {
+    background: rgb(132, 132, 132);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px; /* Фиксированная ширина */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Изображение товара */
+.product img {
+    max-width: 100%;
+    border-radius: 5px;
+    height: auto;
+}
+
+/* Кнопка */
+.money {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.money:hover {
+    background: #218838;
+}
+ 
+footer {
+    background: #1e1e1e;
+    color: white;
+    border: 10px solid #179d02;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+input:hover {
+    background: rgb(146, 146, 146);
+    color: black;
+}
+
+#cart-button {
+    background: rgb(173, 129, 8);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: background 0.3s;
+}
+
+#cart-button:hover {
+    background: rgb(141, 103, 0);
+}
+
+.cart-container {
+    position: fixed;
+    top: 0;
+    right: -1200px; /* Корзина скрыта по умолчанию */
+    width: 300px;
+    height: 100%;
+    background: rgb(160, 160, 160);
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: right 0.3s;
+    overflow-y: auto;
+}
+
+.cart-container.show {
+    right: 0; /* Показываем корзину */
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#clear-cart {
+    background: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+
+/* Контейнер для товаров */
+.catalog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Позволяет товарам переноситься */
+    gap: 20px; /* Отступы между товарами */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+input {
+    color: #1e1e1e;
+    background: white;
+    width: 300px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 800px;
+    height: 40px;
+}

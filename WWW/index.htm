@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopAza-Магазин</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body> 
+    <header>
+        <h3>ShopAzaza</h3>
+        <input type="Введите что-то" placeholder="Введите что-то">
+        <nav>
+            <ul>
+                <li><a target="_blank" href="https://t.me/karen4k_azaza">Telegram</a></li>
+                <li><a target="_blank" href="https://www.youtube.com/">Youtube</a></li>
+                <li><a target="_self" href="index.htm">Главная</a></li>
+                <li><a target="_self" href="cloth.html">Одежда</a></li>
+            </ul>
+        </nav>
+        <button id="cart-button">🛒 Корзина (<span id="cart-count">0</span>)</button>
+    </header>
+    
+    <!-- Контейнер корзины -->
+    <div id="cart" class="cart-container">
+        <h2>Корзина</h2>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Общая сумма: 0 ₽</p>
+        <button id="clear-cart">Очистить корзину</button>
+    </div>
+
+    <section class="catalog">
+        <div class="product">
+            <a href="olempiyka.html" target="_self" title="Качественная олемпийка из хлопка по низкой цене. Только сегодня!">
+            <img src="css/1.jpg" alt="олемпийка на замке"></a>
+            <h3>Олемпийка на замке</h3>
+            <p>Качественная Олемпийка из хлопка по низкой цене. Только сегодня!</p>
+            <span class="price">4000 ₽</span>
+            <button onclick="butononclikc(this)" class="money">В корзину</button>
+        </div>
+
+        <div class="product">
+            <a href="foto3.html" target="_self" title="Носки белые!">
+            <img src="css/11.jpg" alt="Белые носки"></a>
+            <h3>Носки белые</h3>
+            <p>Качественная белые носки с прекрасным принтом!</p>
+            <span class="price">200 ₽</span>
+            <button onclick="butononclikc(this)" class="money">В корзину</button>
+        </div>
+
+        <div class="product">
+            <a href="foto4.html" target="_self" title="Белая футболка!">
+            <img src="css/00.jpg" alt="Белая футболка!"></a>
+            <h3>USA Белая футболка</h3>
+            <p>Футболка из хлопка, тонкая и дышащая. Идеальна для лета!</p>
+            <span class="price">1200 ₽</span>
+            <button onclick="butononclikc(this)" class="money">В корзину</button>
+        </div>
+
+        <div class="product">
+            <a href="foto5.html" target="_self" title="Серый костюм!">
+            <img src="css/111.jpg" alt="Серый костюм!"></a>
+            <h3>Серый костюм</h3>
+            <p>Стильный и удобный костюм на каждый день.</p>
+            <span class="price">3000 ₽</span>
+            <button onclick="butononclikc(this)" class="money">В корзину</button>
+        </div>
+
+    </section>
+    <script src="javascript/main.js"></script>
+
+</body>
+
+<footer>все данные защищенны 2025</footer>
+</html>

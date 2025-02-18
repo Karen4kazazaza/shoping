@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>ShopAza-Магазин:ветровка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* Стили миниатюры */
+        .preview img {
+            width: 200px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .preview img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Модальное окно */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Контейнер изображения */
+        .modal-content {
+            display: block;
+            margin: 5% auto;
+            max-width: 80%;
+            text-align: center;
+        }
+
+        /* Картинка */
+        .modal-img {
+            max-width: 100%;
+            max-height: 80vh;
+        }
+
+        /* Кнопка закрытия */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        /* Кнопки переключения */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transform: translateY(-50%);
+            padding: 10px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Описание */
+        .description {
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ShopAzaza</h1>
+        <nav>
+            <ul>
+                <li><a target="_blank" href="https://t.me/karen4k_azaza">Telegram</a></li>
+                <li><a target="_blank" href="https://www.youtube.com/">Youtube</a></li>
+                <li><a target="_self" href="index.htm">Главная</a></li>
+                <li><a target="_self" href="cloth.html">Одежда</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Превью одной фотки -->
+    <div class="preview">
+        <img src="css/111.jpg" alt="Нажмите, чтобы открыть галерею" onclick="openModal(0)" style="height: max-content; width: 500px;">
+    </div>
+
+    <!-- Модальное окно со слайдером -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+        <img class="modal-content modal-img" id="modalImg">
+        <div class="description" id="modalDesc"></div>
+        <span class="next" onclick="changeSlide(1)">&#10095;</span>
+    </div>
+    <script>
+        let currentIndex = 0;
+
+        // Все изображения галереи
+        const images = [
+            { src: "css/111.jpg", desc: "Серый костюм" },
+            { src: "css/222.jpg", desc: "Серый костюм" },
+            { src: "css/333.jpg", desc: "Серый костюм" }
+        ];
+
+        function openModal(index) {
+            currentIndex = index;
+            document.getElementById('myModal').style.display = 'block';
+            updateSlide();
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
+        function changeSlide(step) {
+            currentIndex += step;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= images.length) currentIndex = 0;
+            updateSlide();
+        }
+
+        function updateSlide() {
+            document.getElementById('modalImg').src = images[currentIndex].src;
+            document.getElementById('modalDesc').innerText = images[currentIndex].desc;
+        }
+
+                var counter = 0; 
+        function butononclikc(el){
+            counter++;
+            el.innerHTML = "Дабавлен в корзину:" + counter; + "шт"
+
+            el.style.background ="red";
+            el.style.color ="white";
+
+            setTimeout(() =>{
+                el.style.background = "";
+                el.style.color ="";
+                el.innerHTML = "В корзину"
+            }, 2000)
+        }
+    </script>
+
+  </body>
+</html>
